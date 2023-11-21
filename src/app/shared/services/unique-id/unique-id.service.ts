@@ -6,8 +6,10 @@ export class UniqueIdService {
 
     private numberOfGeneratedIds = 0;
 
+    private validId = /^[A-Za-z]+[\w\-\:\.]*$/;
+
     public generateUniqueIdWithPrefix(prefix: string): string {
-        if (!prefix) {
+        if (!prefix || !this.validId.test(prefix)) {
             throw Error('Prefix can not be empty');
         }
         const uniqueId = this.generateUniqueId();
