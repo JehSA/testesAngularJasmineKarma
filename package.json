@@ -2,6 +2,7 @@
   "name": "ng-test1",
   "version": "0.0.0",
   "scripts": {
+    "postinstall": "npx --package @angular/compiler-cli@15.2.9 --yes ngcc",
     "start": "ng serve",
     "ng": "ng",
     "build": "ng build",
@@ -20,8 +21,8 @@
     "@angular/platform-browser-dynamic": "~11.0.0",
     "@angular/router": "~11.0.0",
     "@fortawesome/angular-fontawesome": "^0.7.0",
-    "@fortawesome/fontawesome-svg-core": "^1.2.30",
-    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "uuid": "^8.3.0",
