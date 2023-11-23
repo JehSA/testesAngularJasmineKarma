@@ -8,9 +8,10 @@ import { UniqueIdService } from "../../services/unique-id/unique-id.service";
     styleUrls: ['like-widget.component.scss']
 })
 export class LikeWidgetComponent implements OnInit {
+
     @Output() public liked = new EventEmitter<void>();
     @Input() public likes = 0;
-    @Input() public id = null;
+    @Input() public id: string = null;
     fonts = {
         faThumbsUp
     }
@@ -26,4 +27,5 @@ export class LikeWidgetComponent implements OnInit {
     public like(): void {
         this.liked.emit();
     }
+
 }
